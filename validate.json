@@ -1,0 +1,7 @@
+{
+	"code": "VALIDATION_ERROR",
+	"message": "",
+	"data": "",
+	"formId": "signupForm",
+	"fieldErrors": {"firstname": "验证失败"}
+}
