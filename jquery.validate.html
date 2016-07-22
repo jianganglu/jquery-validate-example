@@ -232,7 +232,11 @@
 	</script>
 	<script>
 		$().ready(function() {
-		  $("#signupForm").validate();
+		  $("#signupForm").validate({
+        submitHandler: function(form) {
+
+        }
+      });
 		});
 	</script>
 	<script>
