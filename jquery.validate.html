@@ -190,7 +190,8 @@
 					<input id="confirm_password" name="confirm_password" type="password" class="form-control {required:true,minlength:5,equalTo:'#password'}" />
 				</div>
 			</div>
-			<input class="btn btn-default submit" type="submit" value="Submit"/>
+      <input class="btn btn-default submit" type="submit" value="Submit"/>
+			<input class="btn btn-default submit" id="button" type="button" value="Submit"/>
 			<button id="btn-validate" class="btn btn-primary" type="button">submit</button>
 		</div>
 	</form>
@@ -231,10 +232,16 @@
 		})
 	</script>
 	<script>
-		$().ready(function() {
+		$(document).ready(function() {
 		  $("#signupForm").validate({
         submitHandler: function(form) {
 
+        }
+      });
+
+      $('#button').on('click', function() {
+        if(!$("#signupForm").validate().form()) {
+          return false;
         }
       });
 		});
